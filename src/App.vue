@@ -1,14 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 in CodeSandbox!" />
+  <Window />
 </template>
 
 <script>
-import HelloWorldVue from "./components/HelloWorld.vue";
+import Window from "./window/Window.vue";
 export default {
   name: "App",
   components: {
-    HelloWorld: HelloWorldVue,
+    Window: Window,
   },
 };
 </script>
@@ -16,10 +15,5 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
