@@ -3,13 +3,16 @@
   mode="inline"
   theme="dark"
   >
-  
       <a-menu-item>
-        <DashboardOutlined />
+        <DashboardOutlined>
+          <router-link to="/"/>
+        </DashboardOutlined>
         Navigation Two
       </a-menu-item>
       <a-menu-item>
-        <ClusterOutlined />
+        <ClusterOutlined >
+          <router-link to="/login"/>
+        </ClusterOutlined>
         Navigation Two
       </a-menu-item>
       <a-menu-item>

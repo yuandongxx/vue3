@@ -1,15 +1,15 @@
-import Vue from "vue";
+
 import VueRouter from 'vue-router';
-import Router from "VueRouter";
-import HellowWorld from "../components/HellowWorld.vue"
+import HelloWorld from "../components/HelloWorld.vue"
 const commonRoutes = [
     {name: "",
      path: "/home",
      meta: {tile: "主页"},
-     component: HellowWorld},
-     {name: "",
-      path: "/login",
-      meta: {tile: "主页"},
-      component: HellowWorld},
+     component: HelloWorld},
+    {name: "",
+    path: "/login",
+    meta: {tile: "主页"},
+    component: HelloWorld},
 ]
-export default router = new Router(commonRoutes)
+const router = new VueRouter({routes: commonRoutes})
+export default router;
