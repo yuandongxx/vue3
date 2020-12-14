@@ -1,10 +1,10 @@
 <template>
-  <a-layout id="components-layout-demo-custom-trigger">
+  <a-layout id="components-layout-demo-custom-trigger" style="min-height: 100vh">
     <a-layout-sider
       v-model:collapsed="collapsed"
       :trigger="null"
       collapsible
-      style="{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0}"
+      style="{ overflow: 'auto', height: '2000vh', position: 'fixed', left: 0}"
     >
       <div class="logo" />
       <Menu />
