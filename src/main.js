@@ -1,12 +1,36 @@
 import { createApp } from "vue";
+//import Vuex from "vuex";
 import App from "./App.vue";
-//import VueRouter from 'vue-router'
-import router from "./Routers"
-import { Layout, Menu, Switch } from "ant-design-vue";
-import "ant-design-vue/dist/antd.css";
-const app = createApp(App);
-app.use(router);
-app.use(Layout);
-app.use(Menu);
-app.use(Switch);
-app.mount("#app");
+import "./registerServiceWorker";
+import router from "./router";
+import { Layout, Menu } from "ant-design-vue";
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
+//import modules from "./store/index";
+
+NProgress.configure({
+  easing: "ease",
+  speed: 500,
+  showSpinner: false,
+  trickleSpeed: 200,
+  minimum: 0.3
+});
+//当路由进入前
+router.beforeEach((to, from, next) => {
+  // 每次切换页面时，调用进度条
+  NProgress.start();
+  NProgress.inc();
+  next();
+});
+//当路由进入后：关闭进度条
+router.afterEach(() => {
+  NProgress.done();
+});
+
+//const store = new Vuex.Store({ modules });
+createApp(App)
+  .use(router)
+  //.use(store)
+  .use(Layout)
+  .use(Menu)
+  .mount("#app");
