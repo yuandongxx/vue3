@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Items from "./menu";
-
+// 如果是Menu 发生变化，新增路由应该在中Menu中添加
 const routes = Items.map(item => ({
   path: item.path,
   name: item.name,
