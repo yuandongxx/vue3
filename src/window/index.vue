@@ -24,7 +24,6 @@
           class="trigger"
           @click="() => (collapsed = !collapsed)"
         />
-        {{ collapsed }}
       </a-layout-header>
       <a-layout-content
         :style="{

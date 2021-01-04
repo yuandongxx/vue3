@@ -2,8 +2,13 @@ import { createApp } from "vue";
 //import Vuex from "vuex";
 import App from "./App.vue";
 import "./registerServiceWorker";
-import router from "./router";
-import { Layout, Menu } from "ant-design-vue";
+import router from "./libs/router";
+import { Layout,
+         Menu,
+         Button,
+         Row,
+         Divider,
+         Col } from "ant-design-vue";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 //import modules from "./store/index";
@@ -30,7 +35,10 @@ router.afterEach(() => {
 //const store = new Vuex.Store({ modules });
 createApp(App)
   .use(router)
-  //.use(store)
+  .use(Button)
   .use(Layout)
   .use(Menu)
+  .use(Row)
+  .use(Col)
+  .use(Divider)
   .mount("#app");
