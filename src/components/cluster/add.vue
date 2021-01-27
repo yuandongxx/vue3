@@ -34,20 +34,10 @@
                 <a-input-number
                   v-model:value="form.port"
                   autocomplete="off"/>
-<<<<<<< c87836ff5c7d2c2f9f98d9970532b23d8a491cee
             </a-form-item>
-            <a-form-item name="credential" label="访问凭证">
-            <a-select
-              placeholder="请选择访问凭证"
-              v-model:value="form.credential"
-              show-search
-              >
-              <a-select-option v-for="item in credentials" :key="item" >{{item}}</a-select-option>
-            </a-select>
+
             <a-form-item name="port" label="端口" required>
-            <a-input-number  v-model:value="form.port" autocomplete="off"></a-input-number>
-=======
->>>>>>> .........
+              <a-input-number  v-model:value="form.port" autocomplete="off"></a-input-number>
             </a-form-item>
             <a-form-item name="credential" label="访问凭证">
             <a-select
