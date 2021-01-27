@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ devle ]
+    branches: [ devel ]
   pull_request:
-    branches: [ devle ]
+    branches: [ devel ]
 
 jobs:
   build:
@@ -16,12 +16,8 @@ jobs:
 
     strategy:
       matrix:
-<<<<<<< 8e131bab928cc5b268cc93ed8ee3701c30857092
         # node-version: [10.x, 12.x, 14.x, 15.x] # 15.x taobao 有问题
         node-version: [10.x, 12.x, 14.x]
-=======
-        node-version: [10.x, 12.x, 14.x, 15.x]
->>>>>>> Create node.js.yml
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
