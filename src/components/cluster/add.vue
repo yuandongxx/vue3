@@ -43,6 +43,11 @@
               >
               <a-select-option v-for="item in credentials" :key="item" >{{item}}</a-select-option>
             </a-select>
+            <a-form-item name="port" label="端口" required>
+            <a-input-number  v-model:value="form.port" autocomplete="off"></a-input-number>
+            </a-form-item>
+            <a-form-item name="credential" label="描述信息">
+            <a-textarea v-model:value="form.credential" autocomplete="off"></a-textarea>
             </a-form-item>
             <a-form-item name="description" label="描述信息">
             <a-textarea v-model:value="form.description" autocomplete="off"></a-textarea>
@@ -52,7 +57,6 @@
 </template>
 <script>
 import {inject} from "vue";
-
 export default {
     // computed:{
     //     [Select.name]: Select,
